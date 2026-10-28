@@ -3,5 +3,5 @@ name = "whiteoak-studios/oak"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-description = "Whiteoak Studios' service framework for Roblox — plain-table services, Blink-bound declared remotes, Init/Start lifecycle, policy pipeline."
+description = "Whiteoak Studios' service framework for Roblox — plain-table services, declared remotes bound through Volt, Init/Start lifecycle, rate policy."
 authors = ["Whiteoak Studios <mike@whiteoak.studio>"]
