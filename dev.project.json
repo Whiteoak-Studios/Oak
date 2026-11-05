@@ -1,0 +1,28 @@
+{
+	"name": "oak-dev",
+	"servePlaceIds": [72398334513601],
+	"servePort": 34875,
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"Packages": {
+				"$path": "Packages",
+				"Oak": { "$path": "src" }
+			},
+			"Shared": {
+				"$className": "Folder",
+				"Network": { "$path": "dev/Network" }
+			}
+		},
+		"ServerScriptService": {
+			"Server": { "$path": "dev/Server" }
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"Client": { "$path": "dev/Client" }
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"languageMode": "strict",
+	"lint": {
+		"*": true
+	},
+	"lintErrors": true,
+	"aliases": {
+		"volt": ".volt/src"
+	}
+}

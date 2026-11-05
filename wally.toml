@@ -1,7 +1,15 @@
 [package]
-name = "whiteoak-studios/oak"
-version = "0.1.0"
+name = "fadeluc-123/oak"
+description = "Typed service/controller framework for Roblox on Volt: full Luau inference, typed peers by name, server-authoritative lifecycle."
+version = "0.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-description = "Whiteoak Studios' service framework for Roblox — plain-table services, declared remotes bound through Volt, Init/Start lifecycle, rate policy."
-authors = ["Whiteoak Studios <mike@whiteoak.studio>"]
+license = "Apache-2.0"
+authors = ["Michael Sumner <mike@whiteoak.studio>"]
+
+exclude = ["**"]
+include = ["src", "src/**", "default.project.json", "wally.toml", "README.md", "LICENSE"]
+
+[dependencies]
+Promise = "evaera/promise@4.0.0"
+Volt = "fadeluc-123/volt@0.1.0"
