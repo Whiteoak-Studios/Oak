@@ -20,9 +20,6 @@ jobs:
           cache: true
       - run: wally install
       - run: lune run volt
-      - name: Mount src/ and dev/
-        # Whiteoak TODO: drop once src/ and dev/ are committed; Rojo refuses dev.project.json while a $path is missing
-        run: mkdir -p src dev/Network dev/Server dev/Client
       - run: rojo sourcemap dev.project.json --output sourcemap.json
       - run: wally-package-types --sourcemap sourcemap.json Packages/
       - run: curl -sSfL https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.luau -o globalTypes.d.luau
@@ -31,15 +28,11 @@ jobs:
       - name: Lint
         run: selene src dev
       - name: Analyze
-        # luau-lsp exits 1 on "no files provided", so it runs from the first .luau file in src/ or dev/ on
         run: |
-          [ -n "$(find src dev -name '*.luau')" ] || { echo "src/ and dev/ hold no .luau file to analyze"; exit 0; }
           luau-lsp analyze --platform=roblox --flag:LuauSolverV2=true --sourcemap=sourcemap.json --definitions=globalTypes.d.luau --ignore="Packages/**" --formatter=gnu src dev
       - name: Schema
-        # One volt --check per schema file; a folder with no schema yet, as dev/Schemas before the dev place, has none to check
         run: |
           for schema in tests/Schemas/*.volt dev/Schemas/*.volt; do
-            [ -e "$schema" ] || continue
             volt --check "$schema"
           done
       - name: Tests

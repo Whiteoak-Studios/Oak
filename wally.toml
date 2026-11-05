@@ -1,7 +1,7 @@
 [package]
 name = "fadeluc-123/oak"
 description = "Typed service/controller framework for Roblox on Volt: full Luau inference, typed peers by name, server-authoritative lifecycle."
-version = "0.0.0"
+version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "Apache-2.0"
