@@ -1,0 +1,6 @@
+{
+	"aliases": {
+		"Services": "./Server/Services",
+		"Controllers": "./Client/Services"
+	}
+}
